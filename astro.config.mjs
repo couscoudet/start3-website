@@ -1,13 +1,11 @@
 // @ts-check
 import { defineConfig } from "astro/config";
 
-// https://astro.build/config
 export default defineConfig({
   output: "static",
-  // Si vous utilisez un framework avec routage côté client comme React, Vue, etc.
-  // integrations: [react()], // ou vue(), svelte(), etc.
+  site: "https://start3.tech-talent.fr", // Spécifie l'URL complète de votre site
+  base: "/", // Préfixe pour les chemins relatifs (si votre app n'est pas à la racine)
   build: {
-    // Assurez-vous que ceci est activé si vous utilisez un routage sur le client
     client: "./dist/",
   },
 });
