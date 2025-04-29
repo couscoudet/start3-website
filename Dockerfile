@@ -1,20 +1,12 @@
-# Étape de build
-FROM node:18-alpine AS build
+FROM node:lts AS runtime
 WORKDIR /app
-COPY package*.json ./
-RUN npm ci
+
 COPY . .
+
+RUN npm install
 RUN npm run build
 
-# Étape de production avec une image légère
-FROM node:18-alpine
-RUN npm install -g serve
-WORKDIR /app
-COPY --from=build /app/dist /app
-
-# Créer un fichier de configuration pour serve
-RUN echo '{"rewrites": [{"source": "/**", "destination": "/index.html"}]}' > serve.json
-
-EXPOSE 3000
-# Utiliser la configuration avec le flag -s (SPA mode)
-CMD ["serve", "-l", "3000"]
+ENV HOST=0.0.0.0
+ENV PORT=4321
+EXPOSE 4321
+CMD node ./dist/server/entry.mjs
