@@ -17,4 +17,4 @@ RUN echo '{"rewrites": [{"source": "/**", "destination": "/index.html"}]}' > ser
 
 EXPOSE 3000
 # Utiliser la configuration avec le flag -s (SPA mode)
-CMD ["serve", "-s", ".", "-l", "3000"]
+CMD ["serve", "-l", "3000"]
