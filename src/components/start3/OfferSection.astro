@@ -1,0 +1,201 @@
+---
+---
+
+<section id="offre" class="section offer-section">
+  <div class="container">
+    <h2 class="section-title text-center">Notre offre <span class="accent">Start<span class="number-3">3</span></span></h2>
+    <p class="section-subtitle text-center">Une solution simple, rapide et économique pour vous lancer sur internet</p>
+    
+    <div class="offer-card">
+      <div class="offer-header">
+        <h3 class="offer-price"><span class="number-3">300</span>€</h3>
+        <p class="offer-timeframe">Prêt en <span class="number-3">3</span> jours</p>
+      </div>
+      
+      <div class="offer-features">
+        <div class="feature-item">
+          <div class="feature-icon">📱</div>
+          <div class="feature-text">
+            <h4><span class="number-3">3</span> pages</h4>
+            <p>Exemple : <br>Accueil, Services, Contact</p>
+          </div>
+        </div>
+        
+        <div class="feature-item">
+          <div class="feature-icon">🔍</div>
+          <div class="feature-text">
+            <h4>Google My Business</h4>
+            <p>Création et configuration de votre fiche</p>
+          </div>
+        </div>
+        
+        <div class="feature-item">
+          <div class="feature-icon">🌐</div>
+          <div class="feature-text">
+            <h4>Nom de domaine</h4>
+            <p>Un domaine en .fr inclus</p>
+          </div>
+        </div>
+        
+        <div class="feature-item">
+          <div class="feature-icon">☁️</div>
+          <div class="feature-text">
+            <h4>Hébergement</h4>
+            <p>1 an d'hébergement inclus</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="offer-cta">
+        <a href="#contact" class="btn btn-large pulse">Démarrer votre projet</a>
+      </div>
+    </div>
+    
+    <div class="benefits">
+      <div class="benefit-item">
+        <h4>Simple</h4>
+        <p>Nous nous occupons de tout. Vous n'avez qu'à nous fournir vos informations et images.</p>
+      </div>
+      
+      <div class="benefit-item">
+        <h4>Rapide</h4>
+        <p>Votre site est prêt en <span class="number-3">3</span> jours seulement après validation de vos contenus.</p>
+      </div>
+      
+      <div class="benefit-item">
+        <h4>Professionnel</h4>
+        <p>Un design adapté à votre activité pour une image professionnelle sur le web.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .offer-section {
+    background-color: var(--color-white);
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+  }
+
+  .accent {
+    color: var(--color-primary-dark);
+  }
+
+  .section-subtitle {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 48px;
+  }
+
+  .offer-card {
+    background: var(--color-white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+    padding: 32px;
+    max-width: 800px;
+    margin: 0 auto 48px;
+    border: 2px solid var(--color-primary-light);
+    transition: transform var(--transition-normal);
+  }
+
+  .offer-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .offer-header {
+    text-align: center;
+    margin-bottom: 32px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .offer-price {
+    font-size: 3rem;
+    margin-bottom: 8px;
+  }
+
+  .offer-timeframe {
+    font-size: 1.2rem;
+    color: var(--color-text-light);
+  }
+
+  .offer-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-bottom: 32px;
+  }
+
+  .feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .feature-icon {
+    font-size: 2rem;
+    background-color: rgba(157, 228, 80, 0.2);
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .feature-text h4 {
+    margin-bottom: 4px;
+  }
+
+  .feature-text p {
+    margin-bottom: 0;
+  }
+
+  .offer-cta {
+    text-align: center;
+    margin-top: 24px;
+  }
+
+  .benefits {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 64px;
+  }
+
+  .benefit-item {
+    background-color: rgba(157, 228, 80, 0.1);
+    border-radius: var(--border-radius);
+    padding: 24px;
+    text-align: center;
+    transition: transform var(--transition-normal);
+  }
+
+  .benefit-item:hover {
+    transform: translateY(-5px);
+    background-color: rgba(157, 228, 80, 0.2);
+  }
+
+  .benefit-item h4 {
+    margin-bottom: 12px;
+    color: var(--color-primary-dark);
+  }
+
+  @media (max-width: 768px) {
+    .offer-features {
+      grid-template-columns: 1fr;
+    }
+    
+    .benefits {
+      grid-template-columns: 1fr;
+    }
+    
+    .section-title {
+      font-size: 2rem;
+    }
+  }
+</style>

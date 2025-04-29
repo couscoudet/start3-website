@@ -1,0 +1,103 @@
+---
+---
+
+<section class="hero-section">
+  <div class="animated-background"></div>
+  <div class="container">
+    <div class="hero-content">
+      <h1 class="hero-title fade-in">
+        Votre site web professionnel en <span class="number-3">3</span> jours pour <span class="number-3">300</span>€
+      </h1>
+      <p class="hero-subtitle fade-in">
+        Une offre exclusive pour les artisans, TPE et petits commerçants.
+        <br>
+        Lancez votre présence en ligne sans vous ruiner.
+      </p>
+      <div class="hero-cta fade-in">
+        <a href="#offre" class="btn btn-large">Découvrir l'offre</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-section {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .animated-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(157, 228, 80, 0.1) 0%, rgba(157, 228, 80, 0.05) 100%);
+    z-index: -1;
+    overflow: hidden;
+  }
+
+  .animated-background::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background: radial-gradient(circle, rgba(157, 228, 80, 0.4) 0%, rgba(157, 228, 80, 0) 70%);
+    animation: rotate 25s linear infinite;
+  }
+
+  .animated-background::after {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background: radial-gradient(circle, rgba(182, 242, 117, 0.3) 0%, rgba(182, 242, 117, 0) 60%);
+    animation: rotate 20s linear infinite reverse;
+  }
+
+  @keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 80px;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+    margin-bottom: 24px;
+    animation-delay: 0.2s;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 32px;
+    animation-delay: 0.4s;
+  }
+
+  .hero-cta {
+    animation-delay: 0.6s;
+  }
+
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2.2rem;
+    }
+    
+    .hero-subtitle {
+      font-size: 1rem;
+    }
+  }
+</style>

@@ -1,0 +1,100 @@
+---
+---
+
+<header class="header">
+  <div class="container">
+    <nav class="navbar">
+      <div class="logo">
+        <a href="/">
+          <span class="logo-text">WebAgency</span>
+          <span class="logo-accent">Start<span class="number-3">3</span></span>
+        </a>
+      </div>
+      <div class="nav-links">
+        <a href="/" class="nav-link">L'offre</a>
+        <a href="/options" class="nav-link">Options</a>
+        <a href="/contact" class="nav-link">Contact</a>
+      </div>
+      <a href="/contact" class="btn btn-small">Prendre RDV</a>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(252, 252, 252, 0.9);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 16px 0;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo a {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: var(--color-secondary);
+    line-height: 1;
+  }
+
+  .logo-text {
+    font-size: 0.9em;
+  }
+
+  .logo-accent {
+    color: var(--color-primary-dark);
+    font-size: 1.2em;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 24px;
+  }
+
+  .nav-link {
+    color: var(--color-text);
+    font-weight: 400;
+    position: relative;
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-primary);
+    transition: width var(--transition-normal);
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  .btn-small {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+    
+    .navbar {
+      justify-content: space-between;
+    }
+  }
+</style>

@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Start3Layout.astro';
+import Header from '../components/start3/Header.astro';
+import Footer from '../components/start3/Footer.astro';
+import Legal from '../components/start3/Legal.astro';
+---
+
+<Layout title="Politique de confidentialité">
+  <div class="page-wrapper">
+    <Header />
+    <Legal />
+    <Footer />
+  </div>
+</Layout>
+
+<style>
+  .page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+</style>

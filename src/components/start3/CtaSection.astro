@@ -1,0 +1,370 @@
+<section id="contact" class="section cta-section">
+  <div class="container">
+    <div class="cta-container">
+      <div class="cta-content">
+        <h2 class="cta-title">Prêt à lancer votre présence web ?</h2>
+        <p class="cta-text">
+          Contactez-nous dès aujourd'hui pour bénéficier de notre offre 
+          Start<span class="number-3">3</span> à <span class="number-3">300</span>€ seulement.
+        </p>
+        <p class="cta-subtext">
+          Nous vous répondrons sous 24h pour planifier un rendez-vous et
+          discuter de votre projet.
+        </p>
+      </div>
+      
+      <div class="contact-form">
+        <form id="rdv-form">
+          <div class="form-group">
+            <label for="nom">Nom *</label>
+            <input type="text" id="nom" name="nom" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="telephone">Téléphone *</label>
+            <input type="tel" id="telephone" name="telephone" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="activite">Votre activité</label>
+            <input type="text" id="activite" name="activite">
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+          </div>
+          
+          <!-- Ajout du consentement RGPD -->
+          <div class="form-group consent-group">
+            <input type="checkbox" id="consent" name="consent" required>
+            <label for="consent" class="consent-label">
+              J'accepte que mes données soient collectées pour être recontacté concernant ma demande. 
+              Ces informations ne seront pas utilisées à des fins commerciales ni partagées avec des tiers. *
+            </label>
+          </div>
+          
+          <div class="form-info">
+            <p>Les champs marqués d'un * sont obligatoires.</p>
+            <p>
+              Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données. 
+              Pour en savoir plus, consultez notre <a href="/privacy-policy">politique de confidentialité</a>.
+            </p>
+          </div>
+          
+          <div class="form-submit">
+            <button type="submit" class="btn btn-large">Prendre rendez-vous</button>
+          </div>
+          
+          <!-- Message de confirmation caché par défaut -->
+          <div id="form-success" class="form-success" style="display: none;">
+            <p>Merci pour votre demande de rendez-vous ! Nous vous contacterons très rapidement.</p>
+          </div>
+          
+          <!-- Message d'erreur caché par défaut -->
+          <div id="form-error" class="form-error" style="display: none;">
+            <p>Un problème est survenu lors de l'envoi du formulaire. Veuillez réessayer ou nous contacter directement.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .cta-section {
+    background-color: var(--color-white);
+    position: relative;
+  }
+
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(157, 228, 80, 0.2) 0%, rgba(157, 228, 80, 0) 70%);
+    top: -100px;
+    left: -100px;
+    border-radius: 50%;
+    z-index: 0;
+  }
+
+  .cta-section::after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(157, 228, 80, 0.15) 0%, rgba(157, 228, 80, 0) 70%);
+    bottom: -50px;
+    right: -50px;
+    border-radius: 50%;
+    z-index: 0;
+  }
+
+  .cta-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta-title {
+    font-size: 2.2rem;
+    margin-bottom: 24px;
+    color: var(--color-secondary);
+  }
+
+  .cta-text {
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+  }
+
+  .cta-subtext {
+    opacity: 0.8;
+  }
+
+  .contact-form {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+    padding: 32px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--color-secondary);
+  }
+
+  input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color var(--transition-fast);
+  }
+
+  input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+  }
+
+  .form-submit {
+    margin-top: 24px;
+  }
+
+  .form-submit .btn {
+    width: 100%;
+  }
+
+  /* Styles pour le consentement RGPD */
+  .consent-group {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 24px;
+  }
+
+  .consent-group input {
+    width: auto;
+    margin-top: 5px;
+    margin-right: 10px;
+  }
+
+  .consent-label {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    font-weight: normal;
+  }
+
+  .form-info {
+    font-size: 0.85rem;
+    color: var(--color-secondary-light, #666);
+    margin-bottom: 20px;
+    margin-top: 12px;
+  }
+
+  .form-info a {
+    color: var(--color-primary);
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+  }
+
+  /* Styles pour les messages de succès et d'erreur */
+  .form-success {
+    margin-top: 24px;
+    padding: 16px;
+    background-color: rgba(157, 228, 80, 0.2);
+    border-radius: var(--border-radius);
+    color: #2e7d32;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .form-error {
+    margin-top: 24px;
+    padding: 16px;
+    background-color: rgba(255, 87, 51, 0.1);
+    border-radius: var(--border-radius);
+    color: #c62828;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  /* Ajout d'un indicateur de chargement */
+  .form-loading {
+    position: relative;
+    pointer-events: none;
+    opacity: 0.7;
+  }
+
+  .form-loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    margin: -15px 0 0 -15px;
+    border: 3px solid rgba(157, 228, 80, 0.3);
+    border-top-color: var(--color-primary);
+    border-radius: 50%;
+    animation: form-spinner 0.8s linear infinite;
+  }
+
+  @keyframes form-spinner {
+    to {transform: rotate(360deg);}
+  }
+
+  @media (max-width: 768px) {
+    .cta-container {
+      grid-template-columns: 1fr;
+    }
+    
+    .cta-title {
+      font-size: 1.8rem;
+    }
+  }
+</style>
+
+<script>
+  // Gestion améliorée du formulaire avec envoi à webhook n8n
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('rdv-form') as HTMLFormElement;
+    const formSuccess = document.getElementById('form-success');
+    const formError = document.getElementById('form-error');
+    
+    // URL de votre webhook n8n - À REMPLACER par votre URL réelle
+    const webhookUrl = 'https://n8n.tech-talent.fr/webhook/1e92f09e-47c3-4f4a-a8f0-e89828b66c08';
+    
+    if (form) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        // Vérification du consentement RGPD
+        const consentChecked = (document.getElementById('consent') as HTMLInputElement).checked;
+        if (!consentChecked) {
+          alert('Vous devez accepter la collecte de vos données pour soumettre le formulaire.');
+          return;
+        }
+        
+        // Affichage de l'état de chargement
+        form.classList.add('form-loading');
+        
+        // Récupération des données du formulaire
+        const formData = new FormData(form);
+        const formDataObj: Record<string, string> = {};
+        
+        // Conversion des données du formulaire en objet
+        formData.forEach((value, key) => {
+          formDataObj[key] = value.toString();
+        });
+        
+        // Ajout de la date et heure de soumission
+        formDataObj.dateSubmission = new Date().toISOString();
+        formDataObj.source = 'site-web';
+        
+        try {
+          // Envoi des données au webhook n8n
+          const response = await fetch(webhookUrl, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formDataObj)
+          });
+          
+          // Vérification de la réponse
+          if (response.ok) {
+            // Affichage du message de succès
+            if (formSuccess) formSuccess.style.display = 'block';
+            if (formError) formError.style.display = 'none';
+            
+            // Réinitialisation du formulaire
+            form.reset();
+            
+            // Ajout des données dans le stockage local pour suivi RGPD
+            // Stocke uniquement l'horodatage et un identifiant anonymisé
+            const submissionLog = JSON.parse(localStorage.getItem('formSubmissions') || '[]');
+            submissionLog.push({
+              timestamp: new Date().toISOString(),
+              // Création d'un identifiant anonymisé basé sur l'email et la date
+              // Ne stocke pas les données personnelles dans localStorage
+              submissionId: btoa(`${formDataObj.email}-${Date.now()}`).slice(0, 10)
+            });
+            localStorage.setItem('formSubmissions', JSON.stringify(submissionLog));
+            
+            // Cache le message de succès après 5 secondes
+            setTimeout(() => {
+              if (formSuccess) formSuccess.style.display = 'none';
+            }, 150000);
+          } else {
+            throw new Error('Erreur lors de l\'envoi du formulaire');
+          }
+        } catch (error) {
+          console.error('Erreur:', error);
+          
+          // Affichage du message d'erreur
+          if (formError) formError.style.display = 'block';
+          if (formSuccess) formSuccess.style.display = 'none';
+          
+          // Cache le message d'erreur après 5 secondes
+          setTimeout(() => {
+            if (formError) formError.style.display = 'none';
+          }, 15000);
+        } finally {
+          // Suppression de l'état de chargement
+          form.classList.remove('form-loading');
+        }
+      });
+    }
+    
+    // Ajout de la validation en temps réel du formulaire
+    const inputs = form?.querySelectorAll('input[required], textarea[required]');
+    inputs?.forEach(input => {
+      input.addEventListener('blur', () => {
+        if ((input as HTMLInputElement).value.trim() === '') {
+          input.classList.add('input-error');
+          input.setAttribute('aria-invalid', 'true');
+        } else {
+          input.classList.remove('input-error');
+          input.removeAttribute('aria-invalid');
+        }
+      });
+    });
+  });
+</script>

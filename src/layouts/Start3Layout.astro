@@ -1,0 +1,160 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --color-primary: #9DE450;
+    --color-primary-dark: #7DC238;
+    --color-primary-light: #B6F275;
+    --color-secondary: #2D3E50;
+    --color-text: #333333;
+    --color-text-light: #6E6E6E;
+    --color-background: #FCFCFC;
+    --color-white: #FFFFFF;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html, body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.5;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--color-secondary);
+    line-height: 1.2;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  p {
+    margin-bottom: 16px;
+    color: var(--color-text-light);
+  }
+
+  a {
+    color: var(--color-primary-dark);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+  }
+
+  a:hover {
+    color: var(--color-primary);
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 24px;
+    margin: 0 auto;
+  }
+
+  .section {
+    padding: 80px 0;
+  }
+
+  @media (max-width: 768px) {
+    .section {
+      padding: 60px 0;
+    }
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    font-weight: 600;
+    border-radius: var(--border-radius);
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    text-align: center;
+  }
+
+  .btn:hover {
+    background-color: var(--color-primary-dark);
+    color: var(--color-white);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .btn-large {
+    padding: 16px 32px;
+    font-size: 1.1rem;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .highlight {
+    color: var(--color-primary-dark);
+    font-weight: 600;
+  }
+
+  .number-3 {
+    font-weight: 700;
+    color: var(--color-primary-dark);
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.8s ease forwards;
+    opacity: 0;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .pulse {
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+</style>
