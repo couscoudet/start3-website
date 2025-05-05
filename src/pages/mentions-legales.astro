@@ -8,6 +8,7 @@ import Legal from '../components/start3/Legal.astro';
 <Layout title="Politique de confidentialité">
   <div class="page-wrapper">
     <Header />
+    <div class="header-margin"></div>
     <Legal />
     <Footer />
   </div>
@@ -18,5 +19,9 @@ import Legal from '../components/start3/Legal.astro';
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+  }
+
+  .header-margin {
+    height: 140px;
   }
 </style>

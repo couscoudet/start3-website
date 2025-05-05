@@ -1,10 +1,6 @@
 ---
 import Layout from '../layouts/Start3Layout.astro';
 import Header from '../components/start3/Header.astro';
-import HeroSection from '../components/start3/HeroSection.astro';
-import OfferSection from '../components/start3/OfferSection.astro';
-import OptionSection from '../components/start3/OptionSection.astro';
-import CtaSection from '../components/start3/CtaSection.astro';
 import Footer from '../components/start3/Footer.astro';
 import Privacy from '../components/start3/Privacy.astro';
 ---
@@ -12,6 +8,7 @@ import Privacy from '../components/start3/Privacy.astro';
 <Layout title="Politique de confidentialité">
   <div class="page-wrapper">
     <Header />
+    <div class="header-margin"></div>
     <Privacy />
     <Footer />
   </div>
@@ -22,5 +19,9 @@ import Privacy from '../components/start3/Privacy.astro';
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+  }
+
+  .header-margin {
+    height: 140px;
   }
 </style>

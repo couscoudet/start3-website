@@ -6,12 +6,12 @@
     <h2 class="section-title text-center">Nos Options</h2>
     <div class="option-price">
       <div class="price-card">
-        <h4>Tarif d'une options</h4>
+        <h4>Tarif d'une option</h4>
         <p class="total-price"><span class="number-3" style="color: white;">200€</span></p>
-        <p class="price-detail">exemple 300€ (offre de base) + 200€ (google ads) + 200€ (contenu) = 700€</p>
+        <p class="price-detail">exemple 500€ (offre de base) + 200€ (google ads) + 200€ (contenu) = 900€</p>
       </div>
     </div>
-    <p class="section-subtitle text-center">Boostez votre visibilité avec une campagne publicitaire <span class="highlight">Google Ads ciblée et localisée</span></p>
+    <p class="section-subtitle text-center">Découvrez nos options ci-dessous pour un <span class="highlight">lancement réussi </span></p>
     
     <div class="option-card">
       <div class="option-content">
@@ -154,6 +154,7 @@
     box-shadow: var(--shadow-md);
     padding: 32px;
     margin-top: 40px;
+    margin-bottom: 3em;
   }
 
   .option-details h3 {
@@ -316,7 +317,19 @@
     }
     
     .option-illustration {
-      order: -1;
+      order: +1;
     }
+
+    .option-list li {
+    display: grid;
+    grid-template-columns: 24px 1fr;
+    gap: 12px;
+    align-items: start;
+  }
+  
+  .check-icon {
+    margin-right: 0;
+    margin-top: 3px; /* Pour aligner visuellement avec le début du texte */
+  }
   }
 </style>

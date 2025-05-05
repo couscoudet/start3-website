@@ -5,9 +5,10 @@ import OptionSection from '../components/start3/OptionSection.astro';
 import Footer from '../components/start3/Footer.astro';
 ---
 
-<Layout title="Start3 - Votre présence web en 3 jours pour 300€">
+<Layout title="Start3 - Votre présence web en 3 jours pour 500€">
   <div class="page-wrapper">
     <Header />
+    <div class="header-margin"></div>
     <OptionSection />
     <Footer />
   </div>
@@ -19,4 +20,8 @@ import Footer from '../components/start3/Footer.astro';
     flex-direction: column;
     min-height: 100vh;
   }
+
+.header-margin {
+  height: 140px;
+}
 </style>
