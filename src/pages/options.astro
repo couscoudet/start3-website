@@ -1,11 +1,14 @@
 ---
-import Layout from '../layouts/Start3Layout.astro';
-import Header from '../components/start3/Header.astro';
-import OptionSection from '../components/start3/OptionSection.astro';
-import Footer from '../components/start3/Footer.astro';
+import Layout from "../layouts/Start3Layout.astro";
+import Header from "../components/start3/Header.astro";
+import OptionSection from "../components/start3/OptionSection.astro";
+import Footer from "../components/start3/Footer.astro";
 ---
 
-<Layout title="Start3 - Votre présence web en 3 jours pour 500€">
+<Layout
+  title="Start3 - Votre présence web en 3 jours pour 500€"
+  canonical="https://start3.tech-talent.fr/options"
+>
   <div class="page-wrapper">
     <Header />
     <div class="header-margin"></div>
@@ -21,7 +24,7 @@ import Footer from '../components/start3/Footer.astro';
     min-height: 100vh;
   }
 
-.header-margin {
-  height: 140px;
-}
+  .header-margin {
+    height: 140px;
+  }
 </style>

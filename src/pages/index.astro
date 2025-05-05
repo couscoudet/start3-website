@@ -1,23 +1,26 @@
 ---
-import Layout from '../layouts/Start3Layout.astro';
-import Header from '../components/start3/Header.astro';
-import HeroSection from '../components/start3/HeroSection.astro';
-import OfferSection from '../components/start3/OfferSection.astro';
-import OptionSection from '../components/start3/OptionSection.astro';
-import CtaSection from '../components/start3/CtaSection.astro';
-import Footer from '../components/start3/Footer.astro';
+import Layout from "../layouts/Start3Layout.astro";
+import Header from "../components/start3/Header.astro";
+import HeroSection from "../components/start3/HeroSection.astro";
+import OfferSection from "../components/start3/OfferSection.astro";
+import OptionSection from "../components/start3/OptionSection.astro";
+import CtaSection from "../components/start3/CtaSection.astro";
+import Footer from "../components/start3/Footer.astro";
 ---
 
-<Layout title="Start3 - Votre présence web en 3 jours pour 500€">
-  <div class="page-wrapper">
-    <Header />
-    <HeroSection />
-    <OfferSection />
-    <OptionSection />
-    <CtaSection />
-    <Footer />
-  </div>
-</Layout>
+<Layout
+  title="Start3 - Votre présence web en 3 jours pour 500€"
+  canonical="https://start3.tech-talent.fr/"
+/>
+'>
+<div class="page-wrapper">
+  <Header />
+  <HeroSection />
+  <OfferSection />
+  <OptionSection />
+  <CtaSection />
+  <Footer />
+</div>
 
 <style>
   .page-wrapper {

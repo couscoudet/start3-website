@@ -1,9 +1,10 @@
 ---
 interface Props {
   title: string;
+  canonical: string;
 }
 
-const { title } = Astro.props;
+const { title, canonical } = Astro.props;
 ---
 
 <!doctype html>
@@ -11,28 +12,39 @@ const { title } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/LOGO.png" />
+    <meta
+      name="description"
+      content="Création de site internet professionnel en 3 jours à Houilles et ses environs. Tout compris pour 500 € : design, développement, nom de domaine et hébergement inclus."
+    />
     <meta name="generator" content={Astro.generator} />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="canonical" href={canonical} />
     <title>{title}</title>
     <!-- Matomo -->
-<script type="module">
-  var _paq = window._paq = window._paq || [];
-  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u="//matomo.tech-talent.fr/";
-    _paq.push(['setTrackerUrl', u+'matomo.php']);
-    _paq.push(['setSiteId', '1']);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-<!-- End Matomo Code -->
-
+    <script type="module">
+      var _paq = (window._paq = window._paq || []);
+      /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+      _paq.push(["trackPageView"]);
+      _paq.push(["enableLinkTracking"]);
+      (function () {
+        var u = "//matomo.tech-talent.fr/";
+        _paq.push(["setTrackerUrl", u + "matomo.php"]);
+        _paq.push(["setSiteId", "1"]);
+        var d = document,
+          g = d.createElement("script"),
+          s = d.getElementsByTagName("script")[0];
+        g.async = true;
+        g.src = u + "matomo.js";
+        s.parentNode.insertBefore(g, s);
+      })();
+    </script>
+    <!-- End Matomo Code -->
   </head>
   <body>
     <slot />
@@ -41,14 +53,14 @@ const { title } = Astro.props;
 
 <style is:global>
   :root {
-    --color-primary: #9DE450;
-    --color-primary-dark: #7DC238;
-    --color-primary-light: #B6F275;
-    --color-secondary: #2D3E50;
+    --color-primary: #73d276;
+    --color-primary-dark: #03a349;
+    --color-primary-light: #b6f275;
+    --color-secondary: #2d3e50;
     --color-text: #333333;
-    --color-text-light: #6E6E6E;
-    --color-background: #FCFCFC;
-    --color-white: #FFFFFF;
+    --color-text-light: #6e6e6e;
+    --color-background: #fcfcfc;
+    --color-white: #ffffff;
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
     --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
     --border-radius: 8px;
@@ -62,8 +74,9 @@ const { title } = Astro.props;
     box-sizing: border-box;
   }
 
-  html, body {
-    font-family: 'Poppins', sans-serif;
+  html,
+  body {
+    font-family: "Poppins", sans-serif;
     background-color: var(--color-background);
     color: var(--color-text);
     line-height: 1.5;
@@ -71,7 +84,12 @@ const { title } = Astro.props;
     overflow-x: hidden;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     color: var(--color-secondary);
     line-height: 1.2;
     font-weight: 600;
@@ -154,24 +172,36 @@ const { title } = Astro.props;
     font-weight: 700;
     color: var(--color-primary-dark);
   }
-  
+
   .fade-in {
     animation: fadeIn 0.8s ease forwards;
     opacity: 0;
   }
-  
+
   @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
-  
+
   .pulse {
     animation: pulse 2s infinite;
   }
-  
+
   @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
   }
 </style>

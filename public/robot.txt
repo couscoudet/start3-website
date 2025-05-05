@@ -1,0 +1,6 @@
+# robots.txt pour start3.tech-talent.fr
+
+User-agent: *
+Disallow:
+
+Sitemap: https://start3.tech-talent.fr/sitemap.xml

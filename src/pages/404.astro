@@ -1,0 +1,101 @@
+---
+import Layout from "../layouts/Start3Layout.astro";
+import Header from "../components/start3/Header.astro";
+import CtaSection from "../components/start3/CtaSection.astro";
+import Footer from "../components/start3/Footer.astro";
+---
+
+<Layout title="404 Not Found" canonical="https://start3.tech-talent.fr/404">
+  <Header />
+  <div class="page-wrapper">
+    <div class="error-container">
+      <h1 class="error-code">404</h1>
+      <p class="error-message">NOT FOUND</p>
+      <p class="site-url">start3.tech-talent.fr</p>
+      <p class="error-french">404 PAGE NON TROUVÉE</p>
+    </div>
+  </div>
+</Layout>
+<style>
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #a5e6a5 0%, #4cae4c 50%, #a5e6a5 100%);
+    background-size: 200% 200%;
+    animation: gradientAnimation 10s ease infinite;
+  }
+  .error-container {
+    text-align: center;
+  }
+  @keyframes textPulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.05);
+      opacity: 0.9;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  .error-code {
+    font-size: 150px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+    line-height: 1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    animation: textPulse 3s ease-in-out infinite;
+  }
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0.7;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.7;
+    }
+  }
+
+  .error-message {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin: 0 0 80px 0;
+    animation: fadeInOut 4s ease-in-out infinite;
+  }
+  .site-url {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  .error-french {
+    font-size: 14px;
+    color: #333;
+    letter-spacing: 2px;
+  }
+</style>
