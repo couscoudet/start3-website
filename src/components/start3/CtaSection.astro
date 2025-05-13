@@ -4,73 +4,83 @@
       <div class="cta-content">
         <h2 class="cta-title">Prêt à lancer votre présence web ?</h2>
         <p class="cta-text">
-          Contactez-nous dès aujourd'hui pour bénéficier de notre offre 
-          Start<span class="number-3">3</span> à <span class="number-3">500</span>€ seulement.
+          Contactez-nous dès aujourd'hui pour bénéficier de notre offre Start<span
+            class="number-3">3</span
+          > à <span class="number-3">800</span>€ seulement.
         </p>
         <p class="cta-subtext">
-          Nous vous répondrons sous 2 jours ouvrés pour planifier un rendez-vous et
-          discuter de votre projet.
+          Nous vous répondrons sous 2 jours ouvrés pour planifier un rendez-vous
+          et discuter de votre projet.
         </p>
-        <br>
+        <br />
         <p>
-          Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données. 
-          Pour en savoir plus, consultez notre <a href="/privacy-policy">politique de confidentialité</a>.
+          Conformément au RGPD, vous disposez d'un droit d'accès, de
+          rectification et de suppression de vos données. Pour en savoir plus,
+          consultez notre <a href="/privacy-policy"
+            >politique de confidentialité</a
+          >.
         </p>
       </div>
-      
+
       <div class="contact-form">
         <form id="rdv-form">
           <div class="form-group">
             <label for="nom">Nom *</label>
-            <input type="text" id="nom" name="nom" required>
+            <input type="text" id="nom" name="nom" required />
           </div>
-          
+
           <div class="form-group">
             <label for="email">Email *</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" required />
           </div>
-          
+
           <div class="form-group">
             <label for="telephone">Téléphone *</label>
-            <input type="tel" id="telephone" name="telephone" required>
+            <input type="tel" id="telephone" name="telephone" required />
           </div>
-          
+
           <div class="form-group">
             <label for="activite">Votre activité</label>
-            <input type="text" id="activite" name="activite">
+            <input type="text" id="activite" name="activite" />
           </div>
-          
+
           <div class="form-group">
             <label for="message">Message</label>
             <textarea id="message" name="message" rows="4"></textarea>
           </div>
-          
+
           <!-- Ajout du consentement RGPD -->
           <div class="form-group consent-group">
-            <input type="checkbox" id="consent" name="consent" required>
+            <input type="checkbox" id="consent" name="consent" required />
             <label for="consent" class="consent-label">
-              J'accepte que mes données soient collectées pour être recontacté concernant ma demande. 
-              Ces informations ne seront pas utilisées à des fins commerciales ni partagées avec des tiers. *
+              J'accepte que mes données soient collectées pour être recontacté
+              concernant ma demande. Ces informations ne seront pas utilisées à
+              des fins commerciales ni partagées avec des tiers. *
             </label>
           </div>
-          
+
           <div class="form-info">
             <p>Les champs marqués d'un * sont obligatoires.</p>
-
           </div>
-          
+
           <div class="form-submit">
             <button type="submit" class="btn btn-large">Prendre RDV</button>
           </div>
-          
+
           <!-- Message de confirmation caché par défaut -->
           <div id="form-success" class="form-success" style="display: none;">
-            <p>Merci pour votre demande de rendez-vous ! Nous vous contacterons très rapidement.</p>
+            <p>
+              Merci pour votre demande de rendez-vous ! Nous vous contacterons
+              très rapidement.
+            </p>
           </div>
-          
+
           <!-- Message d'erreur caché par défaut -->
           <div id="form-error" class="form-error" style="display: none;">
-            <p>Un problème est survenu lors de l'envoi du formulaire. Veuillez réessayer ou nous contacter directement.</p>
+            <p>
+              Un problème est survenu lors de l'envoi du formulaire. Veuillez
+              réessayer ou nous contacter directement.
+            </p>
           </div>
         </form>
       </div>
@@ -85,11 +95,15 @@
   }
 
   .cta-section::before {
-    content: '';
+    content: "";
     position: absolute;
     width: 300px;
     height: 300px;
-    background: radial-gradient(circle, rgba(157, 228, 80, 0.2) 0%, rgba(157, 228, 80, 0) 70%);
+    background: radial-gradient(
+      circle,
+      rgba(157, 228, 80, 0.2) 0%,
+      rgba(157, 228, 80, 0) 70%
+    );
     top: -100px;
     left: -100px;
     border-radius: 50%;
@@ -97,11 +111,15 @@
   }
 
   .cta-section::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 200px;
     height: 200px;
-    background: radial-gradient(circle, rgba(157, 228, 80, 0.15) 0%, rgba(157, 228, 80, 0) 70%);
+    background: radial-gradient(
+      circle,
+      rgba(157, 228, 80, 0.15) 0%,
+      rgba(157, 228, 80, 0) 70%
+    );
     bottom: -50px;
     right: -50px;
     border-radius: 50%;
@@ -151,7 +169,8 @@
     color: var(--color-secondary);
   }
 
-  input, textarea {
+  input,
+  textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -161,7 +180,8 @@
     transition: border-color var(--transition-fast);
   }
 
-  input:focus, textarea:focus {
+  input:focus,
+  textarea:focus {
     outline: none;
     border-color: var(--color-primary);
   }
@@ -171,8 +191,6 @@
     display: flex;
     justify-content: center;
   }
-
-
 
   /* Styles pour le consentement RGPD */
   .consent-group {
@@ -235,7 +253,7 @@
   }
 
   .form-loading::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 50%;
     left: 50%;
@@ -249,14 +267,16 @@
   }
 
   @keyframes form-spinner {
-    to {transform: rotate(360deg);}
+    to {
+      transform: rotate(360deg);
+    }
   }
 
   @media (max-width: 768px) {
     .cta-container {
       grid-template-columns: 1fr;
     }
-    
+
     .cta-title {
       font-size: 1.8rem;
     }
@@ -265,106 +285,121 @@
 
 <script>
   // Gestion améliorée du formulaire avec envoi à webhook n8n
-  document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('rdv-form') as HTMLFormElement;
-    const formSuccess = document.getElementById('form-success');
-    const formError = document.getElementById('form-error');
-    
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("rdv-form") as HTMLFormElement;
+    const formSuccess = document.getElementById("form-success");
+    const formError = document.getElementById("form-error");
+
     // URL de votre webhook n8n - À REMPLACER par votre URL réelle
-    const webhookUrl = 'https://n8n.tech-talent.fr/webhook/1e92f09e-47c3-4f4a-a8f0-e89828b66c08';
-    
+    const webhookUrl =
+      "https://n8n.tech-talent.fr/webhook/1e92f09e-47c3-4f4a-a8f0-e89828b66c08";
+
     if (form) {
-      form.addEventListener('submit', async (e) => {
+      form.addEventListener("submit", async (e) => {
         e.preventDefault();
-        
+
         // Vérification du consentement RGPD
-        const consentChecked = (document.getElementById('consent') as HTMLInputElement).checked;
+        const consentChecked = (
+          document.getElementById("consent") as HTMLInputElement
+        ).checked;
         if (!consentChecked) {
-          alert('Vous devez accepter la collecte de vos données pour soumettre le formulaire.');
+          alert(
+            "Vous devez accepter la collecte de vos données pour soumettre le formulaire."
+          );
           return;
         }
-        
+
         // Affichage de l'état de chargement
-        form.classList.add('form-loading');
-        
+        form.classList.add("form-loading");
+
         // Récupération des données du formulaire
         const formData = new FormData(form);
         const formDataObj: Record<string, string> = {};
-        
+
         // Conversion des données du formulaire en objet
         formData.forEach((value, key) => {
           formDataObj[key] = value.toString();
         });
-        
+
         // Ajout de la date et heure de soumission
         formDataObj.dateSubmission = new Date().toISOString();
-        formDataObj.source = 'site-web';
-        
+        formDataObj.source = "site-web";
+
         try {
           // Envoi des données au webhook n8n
           const response = await fetch(webhookUrl, {
-            method: 'POST',
+            method: "POST",
             headers: {
-              'Content-Type': 'application/json',
+              "Content-Type": "application/json",
             },
-            body: JSON.stringify(formDataObj)
+            body: JSON.stringify(formDataObj),
           });
-          
+
           // Vérification de la réponse
           if (response.ok) {
             // Affichage du message de succès
-            if (formSuccess) formSuccess.style.display = 'block';
-            if (formError) formError.style.display = 'none';
-            
+            if (formSuccess) formSuccess.style.display = "block";
+            if (formError) formError.style.display = "none";
+
             // Réinitialisation du formulaire
             form.reset();
-            
+
             // Ajout des données dans le stockage local pour suivi RGPD
             // Stocke uniquement l'horodatage et un identifiant anonymisé
-            const submissionLog = JSON.parse(localStorage.getItem('formSubmissions') || '[]');
+            const submissionLog = JSON.parse(
+              localStorage.getItem("formSubmissions") || "[]"
+            );
             submissionLog.push({
               timestamp: new Date().toISOString(),
               // Création d'un identifiant anonymisé basé sur l'email et la date
               // Ne stocke pas les données personnelles dans localStorage
-              submissionId: btoa(`${formDataObj.email}-${Date.now()}`).slice(0, 10)
+              submissionId: btoa(`${formDataObj.email}-${Date.now()}`).slice(
+                0,
+                10
+              ),
             });
-            localStorage.setItem('formSubmissions', JSON.stringify(submissionLog));
-            
+            localStorage.setItem(
+              "formSubmissions",
+              JSON.stringify(submissionLog)
+            );
+
             // Cache le message de succès après 5 secondes
             setTimeout(() => {
-              if (formSuccess) formSuccess.style.display = 'none';
+              if (formSuccess) formSuccess.style.display = "none";
             }, 150000);
           } else {
-            throw new Error('Erreur lors de l\'envoi du formulaire');
+            throw new Error("Erreur lors de l'envoi du formulaire");
           }
         } catch (error) {
-          console.error('Erreur:', error);
-          
+          console.error("Erreur:", error);
+
           // Affichage du message d'erreur
-          if (formError) formError.style.display = 'block';
-          if (formSuccess) formSuccess.style.display = 'none';
-          
+          if (formError) formError.style.display = "block";
+          if (formSuccess) formSuccess.style.display = "none";
+
           // Cache le message d'erreur après 5 secondes
           setTimeout(() => {
-            if (formError) formError.style.display = 'none';
+            if (formError) formError.style.display = "none";
           }, 15000);
         } finally {
           // Suppression de l'état de chargement
-          form.classList.remove('form-loading');
+          form.classList.remove("form-loading");
         }
       });
     }
-    
+
     // Ajout de la validation en temps réel du formulaire
-    const inputs = form?.querySelectorAll('input[required], textarea[required]');
-    inputs?.forEach(input => {
-      input.addEventListener('blur', () => {
-        if ((input as HTMLInputElement).value.trim() === '') {
-          input.classList.add('input-error');
-          input.setAttribute('aria-invalid', 'true');
+    const inputs = form?.querySelectorAll(
+      "input[required], textarea[required]"
+    );
+    inputs?.forEach((input) => {
+      input.addEventListener("blur", () => {
+        if ((input as HTMLInputElement).value.trim() === "") {
+          input.classList.add("input-error");
+          input.setAttribute("aria-invalid", "true");
         } else {
-          input.classList.remove('input-error');
-          input.removeAttribute('aria-invalid');
+          input.classList.remove("input-error");
+          input.removeAttribute("aria-invalid");
         }
       });
     });
